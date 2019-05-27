@@ -45,7 +45,20 @@ function calculateAverageRating(){
     window.averageMark.textContent = averageMark;
 }
 
-function getAverageMark(marks){
+function getAverageMark(marks) {      
+    if (marks.length > 5) {
+        console.log("Оценок больше 5");
+        marks = marks.slice(0, 5);       
+    };
+    let sum = 0; 
+    let count = 0;
+    for (let i = 0; i < marks.length; i++) {
+        count += 1;
+        sum += marks[i];        
+    }
+    return sum / count;
+    
+    
     // код для задачи №3 писать здесь
     //return averageMark;
-}
+};
