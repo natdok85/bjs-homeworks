@@ -31,7 +31,7 @@ function showSolutionsMessage(a, b, c) {
 showSolutionsMessage(7, 20, -3);
 
 //задача 2
-
+console.log('Задача 2');
 let data = [
     {name: 'algebra', marks: [2, 4, 5, 2, 3, 4]}, 
     {name: 'geometry', marks: [2, 4, 5]},
@@ -48,17 +48,27 @@ function getAverageMark(marks) {
         sum += marks[i];
     };
     return sum / count;
-}
+};
 
 function getAverageScore(data) {
   let sum = 0;
   let count = 0;
   for (let i = 0; i < data.length; i++) {
       count +=1;
-      sum += getAverageMark(data.marks[i]);
+      sum += getAverageMark(data[i].marks);
   };
   return sum / count;
-}
+};
+
+getAverageScore(data);
+console.log('average: ' + getAverageScore(data));
+
+
+
+
+
+
+
 
 
 
