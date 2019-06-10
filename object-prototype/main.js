@@ -21,8 +21,14 @@ function initPrintAnimalSound() {
 }
 
 function getAnimalSound(animal) {
+    if (animal === undefined) {
+        return null;
+    };
+
+    let sound = animal.sound;
+    return sound;
     // код для задачи №2 писать здесь
-}
+};
 
 function initCalculateStatement() {
     for (let idx = 0; idx < 3; idx++) {
@@ -35,5 +41,13 @@ function initCalculateStatement() {
 }
 
 function getAverageMark(marks) {
+    let sum = 0;
+    let count = 0;
+    for (let i = 0; i < marks.length; i++) {
+        count += 1;
+        sum += marks[i];
+    };
+    let roundedAverage = Math.round(sum / count);
+    return roundedAverage;
     // код для задачи №3 писать здесь
-}
+};
