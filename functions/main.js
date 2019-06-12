@@ -32,6 +32,7 @@ showSolutionsMessage(7, 20, -3);
 
 //задача 2
 console.log('Задача 2');
+
 let data = [
     {name: 'algebra', marks: [2, 4, 5, 2, 3, 4]}, 
     {name: 'geometry', marks: [2, 4, 5]},
@@ -39,15 +40,16 @@ let data = [
     {name: 'physics', marks: [5, 5]},
     {name: 'music', marks: [2, 2, 6]}
 ];
-//вспомогательная функция, чтобы вычислить среднее значение массива 
+
+
 function getAverageMark(marks) {
-    let sum = 0;
-    let count = 0;
+let sum = 0;
+let count = 0;
     for (let i = 0; i < marks.length; i++) {
         count +=1;
-        sum += marks[i];
+        sum += marks[i];    
     };
-    return sum / count;
+return sum / count;
 };
 
 function getAverageScore(data) {
@@ -60,8 +62,12 @@ function getAverageScore(data) {
   return sum / count;
 };
 
-getAverageScore(data);
+for (let i = 0; i < data.length; i++) {
+    console.log(data[i].name + ': ' + getAverageMark(data[i].marks));
+};
 console.log('average: ' + getAverageScore(data));
+
+
 
 
 
