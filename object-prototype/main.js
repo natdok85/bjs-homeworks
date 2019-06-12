@@ -7,8 +7,17 @@ function initCheckBirthday() {
 }
 
 function checkBirthday(birthday) {
+    let now = new Date();    
+    let d = new Date(birthday);    
+    let diff = now - d;    
+    age = diff / (3.154e+10);    
+    if (age > 18) {
+        return true
+    };
+
     // код для задачи №1 писать здесь
-}
+};
+
 
 function initPrintAnimalSound() {
     const animal = {
@@ -47,7 +56,6 @@ function getAverageMark(marks) {
         count += 1;
         sum += marks[i];
     };
-    let roundedAverage = Math.round(sum / count);
-    return roundedAverage;
+    return Math.round(sum / count);
     // код для задачи №3 писать здесь
 };
