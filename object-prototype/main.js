@@ -10,7 +10,7 @@ function checkBirthday(birthday) {
     let now = new Date();    
     let d = new Date(birthday);    
     let diff = now - d;    
-    age = diff / (3.154e+10);    
+    age = diff / (365.25 * 24 * 60 * 60 * 1000);    
     if (age > 18) {
         return true
     };
@@ -54,7 +54,7 @@ function getAverageMark(marks) {
     let count = 0;
     for (let i = 0; i < marks.length; i++) {
         count += 1;
-        sum += marks[i];
+        sum += parseInt(marks[i]);
     };
     return Math.round(sum / count);
     // код для задачи №3 писать здесь
